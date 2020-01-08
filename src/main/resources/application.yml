@@ -1,0 +1,14 @@
+server:
+  port: 80
+  address: 0.0.0.0
+tiles:
+  store: ./tilestore
+  prefix: db-
+  debug: false
+
+spring:
+  cache:
+    caffeine:
+      spec: initialCapacity=200,maximumSize=5000,expireAfterWrite=5m
+logging:
+  path: ./log

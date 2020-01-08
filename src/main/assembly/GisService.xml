@@ -1,0 +1,13 @@
+<service>
+    <id>GisService</id>
+    <name>GisService</name>
+    <description>GisService. This runs Spring Boot as a Service.</description>
+    <env name="GIS_HOME" value="%BASE%"/>
+    <executable>java</executable>
+    <arguments>-Xms1g -Xmx4g -jar "%BASE%\TileServer.jar"</arguments>
+    <logpath>log</logpath>
+    <log mode="roll-by-size">
+        <sizeThreshold>10240</sizeThreshold>
+        <keepFiles>8</keepFiles>
+    </log>
+</service>
